@@ -1,0 +1,88 @@
+node_modules/
+yarn.lock
+
+# No logs
+logs/
+.log*
+
+# No compiled files anywhere.
+build/
+
+# No OSX files.
+.DS_Store*
+
+# No vim files
+*.swp
+*.swo
+
+# No Emacs files
+*~
+\#*\#
+.#*
+
+# No {exuberant, universal, ...} ctags files
+/tags
+
+# No logs
+*.log
+
+# No editor files
+.idea
+.settings
+.vscode
+
+# Save states
+.saved
+
+.awcache
+cert.p12
+
+# Redis.
+dump.rdb
+
+# Android
+.gradle
+
+# Terraform
+.terraform
+*.tfstate
+*.tfstate.backup
+*.tfstate.*.backup
+*.tfplan
+
+# Terragrunt
+.terragrunt-cache
+.terraform.lock.hcl
+
+/terraform/pingdom/pingdom-env
+
+# Browser test screenshots --record
+/src/test/browser/screenshots
+/src/test/qa/screenshots
+
+# Browser stack error
+browserstack.err
+
+/notes
+
+# Dot-env files
+.env
+.env.local
+.env.development.local
+
+# Direnv
+.envrc
+!terraform/**/.envrc
+
+# Generated dockerignore
+docker/circleci-private/Dockerfile.dockerignore
+
+# pyenv config
+.python-version
+
+# TypeScript build
+*.tsbuildinfo
+
+# Snyk test output cache
+snyk/.testCache
+snyk/attribution

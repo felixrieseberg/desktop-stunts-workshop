@@ -1,0 +1,45 @@
+body,
+html {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow: overlay;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 0.7em;
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #0000005a;
+}
+
+body::-webkit-scrollbar-track-piece {
+  display: none;
+}
+
+header {
+  app-region: drag;
+  height: 20px;
+  width: 100%;
+  display: block;
+  position: fixed;
+}
+
+[contenteditable] {
+  display: inline-block;
+  outline: 0px solid transparent;
+}
+
+#editor {
+  padding: 20px;
+  white-space: pre-wrap;
+}
