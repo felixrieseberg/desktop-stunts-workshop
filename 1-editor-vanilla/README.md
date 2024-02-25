@@ -20,6 +20,6 @@ Let's take a quick look at the files:
 
 - `package.json` defines that `npm start` should execute `electron .`, which will take a look at the package.json's `main` script to finally run `electron src/main.js`.
 - `src/main.js` is the entry script and executed by Electron's main process. It creates a new `BrowserWindow`, and with it, a new renderer process.
-- `src/preload.js` is the preload script that's executed inside the renderer process [with slightly more powers than a normal website](https://www.electronjs.org/docs/latest/tutorial/tutorial-preload). 
+- `src/preload.js` is the preload script that's executed inside the renderer process [with slightly more powers than a normal website](https://www.electronjs.org/docs/latest/tutorial/tutorial-preload).
 - `src/index.html` is the HTML we're loading in that BrowserWindow.
 - `src/renderer.js` is the JavaScript loaded by the HTML file. It uses the API defined in the preload script to do things.

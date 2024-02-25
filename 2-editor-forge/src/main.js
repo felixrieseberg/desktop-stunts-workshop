@@ -12,20 +12,32 @@ const fs = require("fs/promises");
 let browserWindow;
 let filePath;
 
+// Handle creating/removing shortcuts on Windows when installing/uninstalling.
+if (require("electron-squirrel-startup")) {
+  app.quit();
+}
+
 function createWindow() {
   browserWindow = new BrowserWindow({
     width: 300,
     height: 480,
-    vibrancy: "popover",
-    visualEffectState: "active",
-    titleBarStyle: "customButtonsOnHover",
+    alwaysOnTop: true,
+    show: false,
+    frame: false,
+    titleBarStyle: "hidden",
+    titleBarOverlay: {
+      color: "#ffffff00",
+    },
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
-    alwaysOnTop: true,
+    // macOS options
+    vibrancy: "popover",
+    visualEffectState: "active",
   });
 
   browserWindow.loadFile(path.join(__dirname, "index.html"));
+  browserWindow.on("ready-to-show", () => browserWindow.show());
 }
 
 function createMenu() {
