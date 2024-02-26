@@ -18,7 +18,6 @@ cd desktop-stunts-editor-vanilla
 # Pick a demo
 cd 1-editor-vanilla
 # cd 2-editor-forge
-# cd 3-clippy
 
 # Install dependencies
 npm install
